@@ -11,7 +11,7 @@
         <!--SeSAC TRAVEL-->
         <scene sceneID="mSf-qS-z9x">
             <objects>
-                <tableViewController id="qck-cn-GBS" customClass="MagazineTableViewController" customModule="SeSACHW10" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="qck-cn-GBS" customClass="MagazineTableViewController" customModule="SeSACHW11" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="pJk-D8-HGB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="magazineCell" rowHeight="529" id="BzA-Nz-PZz" customClass="MagazineTableViewCell" customModule="SeSACHW10" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="magazineCell" rowHeight="529" id="BzA-Nz-PZz" customClass="MagazineTableViewCell" customModule="SeSACHW11" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="56.333332061767578" width="414" height="529"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BzA-Nz-PZz" id="FLI-FG-JcZ">
@@ -239,46 +239,68 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k38-uZ-L0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1527.536231884058" y="673.36956521739137"/>
+            <point key="canvasLocation" x="3212" y="795"/>
         </scene>
-        <!--View Controller-->
+        <!--369-->
         <scene sceneID="jTP-y8-SES">
             <objects>
-                <viewController id="el1-zD-HaE" sceneMemberID="viewController">
+                <viewController id="el1-zD-HaE" customClass="ThreeSixNineViewController" customModule="SeSACHW11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e6C-36-vOW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O5-2C-rl6">
-                                <rect key="frame" x="49" y="168" width="298" height="263"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cr-ch-A1q">
-                                <rect key="frame" x="49" y="466" width="298" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">숫자 99까지 총 박수는
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="H99-by-BPG">
+                                <rect key="frame" x="42" y="100" width="330" height="242"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="최대 숫자를 입력해주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjS-ya-Nk0">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="AF9-CI-kri"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYJ-LQ-GsF">
+                                        <rect key="frame" x="0.0" y="80" width="330" height="60"/>
+                                        <string key="text">1,2,3,4,5,6,7,8,9,10,11,
+12,13,14,15,16,17,18,19</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemGray3Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cr-ch-A1q">
+                                        <rect key="frame" x="0.0" y="182" width="330" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="PJT-7i-5LH"/>
+                                        </constraints>
+                                        <string key="text">숫자 99까지 총 박수는
 45번 입니다</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="최대 숫자를 입력해주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjS-ya-Nk0">
-                                <rect key="frame" x="49" y="114" width="298" height="37.333333333333343"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R1q-F9-jKR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R1q-F9-jKR" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H99-by-BPG" secondAttribute="bottom" constant="80" id="HUP-tP-zYX"/>
+                            <constraint firstItem="H99-by-BPG" firstAttribute="leading" secondItem="R1q-F9-jKR" secondAttribute="leading" constant="42" id="MF5-Wt-oEF"/>
+                            <constraint firstItem="R1q-F9-jKR" firstAttribute="trailing" secondItem="H99-by-BPG" secondAttribute="trailing" constant="42" id="RWk-n4-OSw"/>
+                            <constraint firstItem="H99-by-BPG" firstAttribute="top" secondItem="R1q-F9-jKR" secondAttribute="top" constant="80" id="j7E-in-GDR"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="369" image="hands.clap.fill" catalog="system" id="0ZN-sh-5wX"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="7Cr-ch-A1q" id="m5x-EN-qFk"/>
+                        <outlet property="numberTextField" destination="mjS-ya-Nk0" id="7z9-mH-slB"/>
+                        <outlet property="resultLable" destination="UYJ-LQ-GsF" id="NiN-9X-u7e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snE-Qa-Z84" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3213.04347826087" y="0.0"/>
+            <point key="canvasLocation" x="1637.68115942029" y="757.33695652173924"/>
         </scene>
         <!--Magazine-->
         <scene sceneID="Y8n-SU-nuR">
@@ -305,11 +327,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hf4-Fd-9vI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hPj-PW-UUi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="AJB-HY-JCR" kind="relationship" relationship="viewControllers" id="EKU-J8-W4j"/>
+                        <segue destination="el1-zD-HaE" kind="relationship" relationship="viewControllers" id="8Fs-XU-D9e"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70p-cl-Kv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -319,12 +343,16 @@
     </scenes>
     <resources>
         <image name="eraser.line.dashed.fill" catalog="system" width="128" height="108"/>
+        <image name="hands.clap.fill" catalog="system" width="128" height="121"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
