@@ -11,26 +11,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		92DF06082E20E161009DE725 /* SeSACHW10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACHW10.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DF06082E20E161009DE725 /* SeSACHW11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACHW11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		92DF061A2E20E162009DE725 /* Exceptions for "SeSACHW10" folder in "SeSACHW10" target */ = {
+		92DF061A2E20E162009DE725 /* Exceptions for "SeSACHW11" folder in "SeSACHW11" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 92DF06072E20E161009DE725 /* SeSACHW10 */;
+			target = 92DF06072E20E161009DE725 /* SeSACHW11 */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		92DF060A2E20E161009DE725 /* SeSACHW10 */ = {
+		92DF060A2E20E161009DE725 /* SeSACHW11 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				92DF061A2E20E162009DE725 /* Exceptions for "SeSACHW10" folder in "SeSACHW10" target */,
+				92DF061A2E20E162009DE725 /* Exceptions for "SeSACHW11" folder in "SeSACHW11" target */,
 			);
-			path = SeSACHW10;
+			path = SeSACHW11;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -50,7 +50,7 @@
 		92DF05FF2E20E161009DE725 = {
 			isa = PBXGroup;
 			children = (
-				92DF060A2E20E161009DE725 /* SeSACHW10 */,
+				92DF060A2E20E161009DE725 /* SeSACHW11 */,
 				92DF06092E20E161009DE725 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,7 +58,7 @@
 		92DF06092E20E161009DE725 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92DF06082E20E161009DE725 /* SeSACHW10.app */,
+				92DF06082E20E161009DE725 /* SeSACHW11.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,9 +66,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		92DF06072E20E161009DE725 /* SeSACHW10 */ = {
+		92DF06072E20E161009DE725 /* SeSACHW11 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92DF061B2E20E162009DE725 /* Build configuration list for PBXNativeTarget "SeSACHW10" */;
+			buildConfigurationList = 92DF061B2E20E162009DE725 /* Build configuration list for PBXNativeTarget "SeSACHW11" */;
 			buildPhases = (
 				92DF06042E20E161009DE725 /* Sources */,
 				92DF06052E20E161009DE725 /* Frameworks */,
@@ -79,14 +79,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				92DF060A2E20E161009DE725 /* SeSACHW10 */,
+				92DF060A2E20E161009DE725 /* SeSACHW11 */,
 			);
-			name = SeSACHW10;
+			name = SeSACHW11;
 			packageProductDependencies = (
 				92DF06552E23E1B3009DE725 /* Kingfisher */,
 			);
 			productName = SeSACHW10;
-			productReference = 92DF06082E20E161009DE725 /* SeSACHW10.app */;
+			productReference = 92DF06082E20E161009DE725 /* SeSACHW11.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 92DF06032E20E161009DE725 /* Build configuration list for PBXProject "SeSACHW10" */;
+			buildConfigurationList = 92DF06032E20E161009DE725 /* Build configuration list for PBXProject "SeSACHW11" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92DF06072E20E161009DE725 /* SeSACHW10 */,
+				92DF06072E20E161009DE725 /* SeSACHW11 */,
 			);
 		};
 /* End PBXProject section */
@@ -155,7 +155,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SeSACHW10/Info.plist;
+				INFOPLIST_FILE = SeSACHW11/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -166,7 +166,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.morgan.SeSACHW10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgan.SeSACHW11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -182,7 +182,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SeSACHW10/Info.plist;
+				INFOPLIST_FILE = SeSACHW11/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -193,7 +193,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.morgan.SeSACHW10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.morgan.SeSACHW11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92DF06032E20E161009DE725 /* Build configuration list for PBXProject "SeSACHW10" */ = {
+		92DF06032E20E161009DE725 /* Build configuration list for PBXProject "SeSACHW11" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92DF061E2E20E162009DE725 /* Debug */,
@@ -332,7 +332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92DF061B2E20E162009DE725 /* Build configuration list for PBXNativeTarget "SeSACHW10" */ = {
+		92DF061B2E20E162009DE725 /* Build configuration list for PBXNativeTarget "SeSACHW11" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92DF061C2E20E162009DE725 /* Debug */,
