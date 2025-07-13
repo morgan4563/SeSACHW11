@@ -30,13 +30,14 @@ class MagazineTableViewController: UITableViewController {
 
         cell.titleLabel.text = magazine.title
         cell.subtitleLabel.text = magazine.subtitle
+
         if let url = URL(string: magazine.photo_image) {
             cell.photoImage.kf.setImage(with: url)
         }
-
         if let date = df.date(from: magazine.date) {
             cell.dateLabel.text = df.string(from: date)
         }
+
         return cell
     }
 
