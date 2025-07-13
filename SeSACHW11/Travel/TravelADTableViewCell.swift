@@ -11,18 +11,16 @@ class TravelADTableViewCell: UITableViewCell {
 
     @IBOutlet var adTextLabel: UILabel!
     @IBOutlet var adBackgroundView: UIView!
-    @IBOutlet var adViewBackground: UIView!
+    @IBOutlet var adLabelBackground: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         adBackgroundView.layer.cornerRadius = 10
-        adViewBackground.layer.cornerRadius = 10
+        adLabelBackground.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

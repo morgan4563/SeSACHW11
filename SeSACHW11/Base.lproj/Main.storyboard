@@ -284,8 +284,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="adBackgroundView" destination="jwS-Ij-u6z" id="vQ5-Rh-2bv"/>
+                                    <outlet property="adLabelBackground" destination="egk-3u-d58" id="2Pi-cA-nUA"/>
                                     <outlet property="adTextLabel" destination="l5R-SW-l68" id="dc1-t8-hW5"/>
-                                    <outlet property="adViewBackground" destination="egk-3u-d58" id="2Pi-cA-nUA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
