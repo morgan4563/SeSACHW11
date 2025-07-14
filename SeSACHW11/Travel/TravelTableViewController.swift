@@ -76,7 +76,9 @@ class TravelTableViewController: UITableViewController {
 
         if let travelImageString = travel.travel_image {
             if let url = URL(string: travelImageString) {
-                cell.travelImage.kf.setImage(with: url)
+                let processor = DownsamplingImageProcessor(size: CGSize(width: cell.travelImage.bounds.width, height: cell.travelImage.bounds.height))
+
+                cell.travelImage.kf.setImage(with: url, options: [.processor(processor)])
             }
         }
     }
