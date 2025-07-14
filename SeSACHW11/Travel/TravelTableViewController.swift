@@ -13,6 +13,12 @@ class TravelTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let travelXib = UINib(nibName: "TravelTableViewCell", bundle: nil)
+        let travelAd = UINib(nibName: "TravelADTableViewCell", bundle: nil)
+
+        tableView.register(travelXib, forCellReuseIdentifier: "TravelTableViewCell")
+        tableView.register(travelAd, forCellReuseIdentifier: "TravelADTableViewCell")
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -22,12 +28,12 @@ class TravelTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let travel = travelInfo.travel[indexPath.row]
         if travel.ad {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "adCell", for: indexPath) as! TravelADTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TravelADTableViewCell", for: indexPath) as! TravelADTableViewCell
             configureAdCell(cell: cell, travel: travel)
 
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "travelCell", for: indexPath) as!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell", for: indexPath) as!
             TravelTableViewCell
 
             configureTravelCell(cell: cell, travel: travel, indexPath: indexPath)

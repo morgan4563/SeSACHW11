@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelADTableViewCell" rowHeight="75" id="nmB-Jl-4z4" customClass="TravelADTableViewCell" customModule="SeSACHW11" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nmB-Jl-4z4" id="lgV-Il-mBF">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-Aw-BRV">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="75"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psX-9N-ihb">
+                                <rect key="frame" x="39.666666666666657" y="16" width="260" height="43"/>
+                                <string key="text">하와이 여행을 가고싶다면?
+수업이 있는데 가실 생각은 아니시죠?</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSQ-en-c6q">
+                                <rect key="frame" x="309" y="8" width="22" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-xk-hb2">
+                                        <rect key="frame" x="3.6666666666666856" y="3" width="15" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="AYr-NO-MQq"/>
+                                    <constraint firstItem="Tve-xk-hb2" firstAttribute="centerY" secondItem="VSQ-en-c6q" secondAttribute="centerY" id="Obi-cg-uJf"/>
+                                    <constraint firstItem="Tve-xk-hb2" firstAttribute="centerX" secondItem="VSQ-en-c6q" secondAttribute="centerX" id="iBE-KH-2bn"/>
+                                    <constraint firstAttribute="height" constant="18" id="vYR-Ph-xbx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.29732674320000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VSQ-en-c6q" firstAttribute="top" secondItem="l1f-Aw-BRV" secondAttribute="top" constant="8" id="LPg-M6-x4Q"/>
+                            <constraint firstItem="psX-9N-ihb" firstAttribute="centerY" secondItem="l1f-Aw-BRV" secondAttribute="centerY" id="ReJ-iJ-B4a"/>
+                            <constraint firstItem="psX-9N-ihb" firstAttribute="centerX" secondItem="l1f-Aw-BRV" secondAttribute="centerX" id="aWB-gM-UDN"/>
+                            <constraint firstAttribute="trailing" secondItem="VSQ-en-c6q" secondAttribute="trailing" constant="8" id="ek9-gz-Z5P"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="l1f-Aw-BRV" firstAttribute="leading" secondItem="lgV-Il-mBF" secondAttribute="leading" id="4Eg-TU-AS3"/>
+                    <constraint firstAttribute="trailing" secondItem="l1f-Aw-BRV" secondAttribute="trailing" id="lfo-eX-Kij"/>
+                    <constraint firstAttribute="bottom" secondItem="l1f-Aw-BRV" secondAttribute="bottom" id="o2G-oN-HRi"/>
+                    <constraint firstItem="l1f-Aw-BRV" firstAttribute="top" secondItem="lgV-Il-mBF" secondAttribute="top" id="zWS-jL-trN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="adBackgroundView" destination="l1f-Aw-BRV" id="xI5-el-NWQ"/>
+                <outlet property="adLabelBackground" destination="VSQ-en-c6q" id="hqb-ZJ-FXh"/>
+                <outlet property="adTextLabel" destination="psX-9N-ihb" id="t5w-9s-AxP"/>
+            </connections>
+            <point key="canvasLocation" x="188.54961832061068" y="61.619718309859159"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
