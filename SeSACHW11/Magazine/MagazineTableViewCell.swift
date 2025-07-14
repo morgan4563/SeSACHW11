@@ -19,4 +19,16 @@ class MagazineTableViewCell: UITableViewCell {
         imageViewContainer.layer.cornerRadius = 10
         imageViewContainer.clipsToBounds = true
     }
+
+    func configure(row: Magazine, df: DateFormatter) {
+        titleLabel.text = row.title
+        subtitleLabel.text = row.subtitle
+
+        if let url = URL(string: row.photo_image) {
+            photoImage.kf.setImage(with: url)
+        }
+        if let date = df.date(from: row.date) {
+            dateLabel.text = df.string(from: date)
+        }
+    }
 }
