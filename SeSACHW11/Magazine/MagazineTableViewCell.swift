@@ -1,8 +1,8 @@
 //
 //  MagazineTableViewCell.swift
-//  SeSACHW10
+//  SeSACHW11
 //
-//  Created by hyunMac on 7/13/25.
+//  Created by hyunMac on 7/14/25.
 //
 
 import UIKit

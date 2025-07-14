@@ -22,90 +22,13 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="magazineCell" rowHeight="529" id="BzA-Nz-PZz" customClass="MagazineTableViewCell" customModule="SeSACHW11" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="56.333332061767578" width="414" height="529"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6MR-LB-dP0">
+                                <rect key="frame" x="0.0" y="56.333332061767578" width="414" height="44.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BzA-Nz-PZz" id="FLI-FG-JcZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="529"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6MR-LB-dP0" id="Hqo-DK-Jfc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vlH-aj-m5b">
-                                            <rect key="frame" x="16" y="8" width="382" height="513"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zf2-1O-MbR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="382"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eraser.line.dashed.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vUp-Zh-ZHi">
-                                                            <rect key="frame" x="0.0" y="-0.66666666666665719" width="382" height="383.33333333333326"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="vUp-Zh-ZHi" secondAttribute="height" multiplier="1:1" id="gpW-nk-BVs"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="vUp-Zh-ZHi" firstAttribute="top" secondItem="Zf2-1O-MbR" secondAttribute="top" id="CZu-vK-GRH"/>
-                                                        <constraint firstAttribute="bottom" secondItem="vUp-Zh-ZHi" secondAttribute="bottom" id="bgH-Vs-rfr"/>
-                                                        <constraint firstItem="vUp-Zh-ZHi" firstAttribute="leading" secondItem="Zf2-1O-MbR" secondAttribute="leading" id="otJ-iZ-6ch"/>
-                                                        <constraint firstAttribute="trailing" secondItem="vUp-Zh-ZHi" secondAttribute="trailing" id="pBs-X0-yL7"/>
-                                                    </constraints>
-                                                </view>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="YzG-ob-Nik">
-                                                    <rect key="frame" x="0.0" y="390" width="382" height="123"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP9-aN-KcU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="67.333333333333329"/>
-                                                            <string key="text">2024 NEWS
-해외여행, 이렇게 달라졌다!</string>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알고 준비하는 2024 새 여행" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA0-q3-6Bi">
-                                                            <rect key="frame" x="0.0" y="71.333333333333314" width="382" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23년 11월 18일" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAA-GZ-FNZ">
-                                                            <rect key="frame" x="0.0" y="99.333333333333314" width="382" height="23.666666666666671"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="vA0-q3-6Bi" firstAttribute="leading" secondItem="YzG-ob-Nik" secondAttribute="leading" id="2aR-eh-a5K"/>
-                                                        <constraint firstItem="EP9-aN-KcU" firstAttribute="leading" secondItem="YzG-ob-Nik" secondAttribute="leading" id="F1p-Iu-QiV"/>
-                                                        <constraint firstAttribute="trailing" secondItem="vA0-q3-6Bi" secondAttribute="trailing" id="VTI-lk-3ZI"/>
-                                                        <constraint firstAttribute="trailing" secondItem="EP9-aN-KcU" secondAttribute="trailing" id="Vw0-y9-Mo3"/>
-                                                        <constraint firstAttribute="trailing" secondItem="aAA-GZ-FNZ" secondAttribute="trailing" id="bIE-FI-wej"/>
-                                                        <constraint firstItem="aAA-GZ-FNZ" firstAttribute="leading" secondItem="YzG-ob-Nik" secondAttribute="leading" id="s1b-Ju-be6"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="YzG-ob-Nik" secondAttribute="trailing" id="3On-5Q-ShI"/>
-                                                <constraint firstItem="YzG-ob-Nik" firstAttribute="leading" secondItem="vlH-aj-m5b" secondAttribute="leading" id="6e4-2f-KHQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="Zf2-1O-MbR" secondAttribute="trailing" id="8A0-kR-OEW"/>
-                                                <constraint firstItem="Zf2-1O-MbR" firstAttribute="leading" secondItem="vlH-aj-m5b" secondAttribute="leading" id="tcd-6t-UCX"/>
-                                            </constraints>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="vlH-aj-m5b" secondAttribute="trailing" constant="16" id="SfE-TC-zYH"/>
-                                        <constraint firstItem="vlH-aj-m5b" firstAttribute="top" secondItem="FLI-FG-JcZ" secondAttribute="top" constant="8" id="TUa-FT-ODu"/>
-                                        <constraint firstItem="vlH-aj-m5b" firstAttribute="leading" secondItem="FLI-FG-JcZ" secondAttribute="leading" constant="16" id="bw5-n1-zGI"/>
-                                        <constraint firstAttribute="bottom" secondItem="vlH-aj-m5b" secondAttribute="bottom" constant="8" id="w45-HS-ViL"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dateLabel" destination="aAA-GZ-FNZ" id="EL6-DY-Xmp"/>
-                                    <outlet property="imageViewContainer" destination="Zf2-1O-MbR" id="m5u-RE-exF"/>
-                                    <outlet property="photoImage" destination="vUp-Zh-ZHi" id="tzR-a6-Vi2"/>
-                                    <outlet property="subtitleLabel" destination="vA0-q3-6Bi" id="5OB-qh-sYh"/>
-                                    <outlet property="titleLabel" destination="EP9-aN-KcU" id="10w-Dl-Er6"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -422,7 +345,6 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
-        <image name="eraser.line.dashed.fill" catalog="system" width="128" height="108"/>
         <image name="hands.clap.fill" catalog="system" width="128" height="121"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
