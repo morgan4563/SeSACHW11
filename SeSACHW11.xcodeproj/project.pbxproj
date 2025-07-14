@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		92DF06562E23E1B3009DE725 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 92DF06552E23E1B3009DE725 /* Kingfisher */; };
+		92DF07EF2E255DF2009DE725 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 92DF07EE2E255DF2009DE725 /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DF07EF2E255DF2009DE725 /* Toast in Frameworks */,
 				92DF06562E23E1B3009DE725 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +86,7 @@
 			name = SeSACHW11;
 			packageProductDependencies = (
 				92DF06552E23E1B3009DE725 /* Kingfisher */,
+				92DF07EE2E255DF2009DE725 /* Toast */,
 			);
 			productName = SeSACHW10;
 			productReference = 92DF06082E20E161009DE725 /* SeSACHW11.app */;
@@ -115,6 +118,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				92DF06542E23E1B3009DE725 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				92DF07ED2E255DF2009DE725 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 92DF06092E20E161009DE725 /* Products */;
@@ -352,6 +356,14 @@
 				minimumVersion = 8.4.0;
 			};
 		};
+		92DF07ED2E255DF2009DE725 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -359,6 +371,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 92DF06542E23E1B3009DE725 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		92DF07EE2E255DF2009DE725 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92DF07ED2E255DF2009DE725 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

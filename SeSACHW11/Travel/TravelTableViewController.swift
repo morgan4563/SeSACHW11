@@ -86,6 +86,12 @@ class TravelTableViewController: UITableViewController {
         return travelAd ? 100: 150
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if travelInfo.travel[indexPath.row].ad {
+            tableView.window?.makeToast("광고 셀입니다", position: .top)
+        }
+    }
+
     @objc func heartButtonTapped(_ sender: UIButton) {
         travelInfo.travel[sender.tag].like?.toggle()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .none)
