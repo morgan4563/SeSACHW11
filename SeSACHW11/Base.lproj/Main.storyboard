@@ -207,6 +207,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ItD-rp-b6e"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="fSo-Vp-LQp" id="Rph-4F-MD7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIf-5y-MUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
