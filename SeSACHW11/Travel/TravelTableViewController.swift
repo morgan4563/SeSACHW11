@@ -92,11 +92,14 @@ class TravelTableViewController: UITableViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         if travelInfo.travel[indexPath.row].ad {
             let vc = sb.instantiateViewController(withIdentifier: "TravelADDetailViewController") as! TravelADDetailViewController
+
 			let nav = UINavigationController(rootViewController: vc)
             nav.modalPresentationStyle = .fullScreen
+
             present(nav, animated: true)
         } else {
             let vc = sb.instantiateViewController(withIdentifier: "TravelDetailViewController") as! TravelDetailViewController
+
             navigationController?.pushViewController(vc, animated: true)
         }
     }
