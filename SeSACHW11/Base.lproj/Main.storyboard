@@ -59,7 +59,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k38-uZ-L0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3114" y="871"/>
+            <point key="canvasLocation" x="2914" y="871"/>
         </scene>
         <!--Travel Detail View Controller-->
         <scene sceneID="eJt-gf-Ctr">
@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQm-Nf-Obq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3939" y="871"/>
+            <point key="canvasLocation" x="4049" y="871"/>
         </scene>
         <!--TravelAD Detail View Controller-->
         <scene sceneID="oBM-6w-2kZ">
@@ -164,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufH-7a-kCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4733" y="871"/>
+            <point key="canvasLocation" x="4883" y="871"/>
         </scene>
         <!--Pupular City Table View Controller-->
         <scene sceneID="mAL-Rw-dhE">
@@ -320,7 +320,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGt-iq-Ltn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2267" y="871"/>
+            <point key="canvasLocation" x="2143" y="871"/>
         </scene>
     </scenes>
     <resources>

@@ -12,18 +12,17 @@ class TravelADDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        settingNavigation()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func settingNavigation() {
+        navigationItem.title = "광고화면"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(close)
+        )
+        navigationItem.leftBarButtonItem?.tintColor = .black
     }
-    */
 
+    @objc func close() {
+        dismiss(animated: true)
+    }
 }
