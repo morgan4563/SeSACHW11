@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-Aw-BRV">
-                        <rect key="frame" x="0.0" y="0.0" width="339" height="75"/>
+                        <rect key="frame" x="16" y="8" width="307" height="59"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psX-9N-ihb">
-                                <rect key="frame" x="39.666666666666657" y="16" width="260" height="43"/>
+                                <rect key="frame" x="23.666666666666657" y="8" width="260" height="43"/>
                                 <string key="text">하와이 여행을 가고싶다면?
 수업이 있는데 가실 생각은 아니시죠?</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSQ-en-c6q">
-                                <rect key="frame" x="309" y="8" width="22" height="18"/>
+                                <rect key="frame" x="277" y="8" width="22" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-xk-hb2">
                                         <rect key="frame" x="3.6666666666666856" y="3" width="15" height="12"/>
@@ -56,10 +56,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="l1f-Aw-BRV" firstAttribute="leading" secondItem="lgV-Il-mBF" secondAttribute="leading" id="4Eg-TU-AS3"/>
-                    <constraint firstAttribute="trailing" secondItem="l1f-Aw-BRV" secondAttribute="trailing" id="lfo-eX-Kij"/>
-                    <constraint firstAttribute="bottom" secondItem="l1f-Aw-BRV" secondAttribute="bottom" id="o2G-oN-HRi"/>
-                    <constraint firstItem="l1f-Aw-BRV" firstAttribute="top" secondItem="lgV-Il-mBF" secondAttribute="top" id="zWS-jL-trN"/>
+                    <constraint firstItem="l1f-Aw-BRV" firstAttribute="leading" secondItem="lgV-Il-mBF" secondAttribute="leading" constant="16" id="4Eg-TU-AS3"/>
+                    <constraint firstAttribute="trailing" secondItem="l1f-Aw-BRV" secondAttribute="trailing" constant="16" id="lfo-eX-Kij"/>
+                    <constraint firstAttribute="bottom" secondItem="l1f-Aw-BRV" secondAttribute="bottom" constant="8" id="o2G-oN-HRi"/>
+                    <constraint firstItem="l1f-Aw-BRV" firstAttribute="top" secondItem="lgV-Il-mBF" secondAttribute="top" constant="8" id="zWS-jL-trN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
