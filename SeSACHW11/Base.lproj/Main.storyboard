@@ -143,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQm-Nf-Obq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4049" y="871"/>
+            <point key="canvasLocation" x="3645" y="871"/>
         </scene>
         <!--TravelAD Detail View Controller-->
         <scene sceneID="oBM-6w-2kZ">
@@ -172,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufH-7a-kCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4883" y="871"/>
+            <point key="canvasLocation" x="3645" y="1538"/>
         </scene>
         <!--Pupular City Table View Controller-->
         <scene sceneID="mAL-Rw-dhE">
@@ -206,10 +206,11 @@
                             <outlet property="delegate" destination="WdL-st-jrq" id="JYQ-4z-Y6A"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="ItD-rp-b6e"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIf-5y-MUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5552" y="871"/>
+            <point key="canvasLocation" x="5423" y="871"/>
         </scene>
         <!--369-->
         <scene sceneID="jTP-y8-SES">
@@ -305,6 +306,7 @@
                         <segue destination="AJB-HY-JCR" kind="relationship" relationship="viewControllers" id="EKU-J8-W4j"/>
                         <segue destination="el1-zD-HaE" kind="relationship" relationship="viewControllers" id="8Fs-XU-D9e"/>
                         <segue destination="feN-7y-lal" kind="relationship" relationship="viewControllers" id="c9R-kp-NPX"/>
+                        <segue destination="TsG-5t-nYD" kind="relationship" relationship="viewControllers" id="tqZ-9e-XNo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70p-cl-Kv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -330,12 +332,32 @@
             </objects>
             <point key="canvasLocation" x="2143" y="871"/>
         </scene>
+        <!--Pupular-->
+        <scene sceneID="2WO-ZW-IAk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TsG-5t-nYD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pupular" image="person.3.fill" catalog="system" id="LYj-6q-S0z"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Yc-O8-2x8">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WdL-st-jrq" kind="relationship" relationship="rootViewController" id="whq-la-y11"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JxR-Hr-zXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4590" y="871"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
         <image name="hands.clap.fill" catalog="system" width="128" height="121"/>
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.3.fill" catalog="system" width="128" height="66"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

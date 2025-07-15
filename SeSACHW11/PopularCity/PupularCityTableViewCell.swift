@@ -6,18 +6,34 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PupularCityTableViewCell: UITableViewCell {
+    @IBOutlet var cityName: UILabel!
+    @IBOutlet var cityExplain: UILabel!
+    @IBOutlet var cityImage: UIImageView!
+    @IBOutlet var cityCellBackground: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+//        cityImage.layer.cornerRadius = 15
+//        cityImage.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMinYCorner]
+//        cityImage.clipsToBounds = true
 
-        // Configure the view for the selected state
-    }
+//        cityCellBackground.layer.shadowOpacity = 0.5
+//        cityCellBackground.layer.shadowOffset = CGSize(width: 0, height: 2)
     
+    }
+
+    func configureUI(row: City) {
+        cityName.text = "\(row.city_name) | \(row.city_english_name)"
+        cityExplain.text = "  \(row.city_explain)"
+
+        if let url = URL(string: row.city_image) {
+            let processor = DownsamplingImageProcessor(size: CGSize(width: cityImage.bounds.width, height: cityImage.bounds.height))
+
+            cityImage.kf.setImage(with: url, options: [.processor(processor)])
+        }
+    }
 }
