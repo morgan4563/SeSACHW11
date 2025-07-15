@@ -89,8 +89,14 @@ class TravelTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
         if travelInfo.travel[indexPath.row].ad {
-            tableView.window?.makeToast("광고 셀입니다", position: .top)
+            let vc = sb.instantiateViewController(withIdentifier: "TravelADDetailViewController") as! TravelADDetailViewController
+            navigationController?.modalPresentationStyle = .overFullScreen
+            navigationController?.present(vc, animated: true)
+        } else {
+            let vc = sb.instantiateViewController(withIdentifier: "TravelDetailViewController") as! TravelDetailViewController
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 
