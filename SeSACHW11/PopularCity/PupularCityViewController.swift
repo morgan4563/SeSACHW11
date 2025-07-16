@@ -9,19 +9,18 @@ import UIKit
 class PupularCityViewController: UIViewController {
     let cities = CityInfo()
     var filteredCities: [City] = []
-    @IBOutlet var tableView: UITableView!
 
-    @IBOutlet var searchTextField: UISearchBar!
+    @IBOutlet var tableView: UITableView!
     @IBOutlet var segumentController: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchTextField.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
         configureNib()
         segumentController.addTarget(self, action: #selector(didChangeValue(segment:)), for: .valueChanged)
+        configureSearchController()
         didChangeValue(segment: segumentController)
     }
 
@@ -40,6 +39,15 @@ class PupularCityViewController: UIViewController {
             filteredCities = cities.city
         }
         tableView.reloadData()
+    }
+
+    func configureSearchController() {
+		let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "도시 검색"
+        searchController.hidesNavigationBarDuringPresentation = false
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
 }
 
@@ -64,10 +72,10 @@ extension PupularCityViewController: UITableViewDelegate, UITableViewDataSource 
     }
 }
 
-extension PupularCityViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+extension PupularCityViewController: UISearchResultsUpdating, UISearchControllerDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
         print(#function)
-        let keyword = (searchTextField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        let keyword = (searchController.searchBar.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
 
         let segIndex = segumentController.selectedSegmentIndex
 
