@@ -15,9 +15,10 @@ class PopularCityViewController: UIViewController {
 
     let cities = CityInfo()
     var filteredCities: [City] = []
+    var lastKeyword = ""
 
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var segumentController: UISegmentedControl!
+    @IBOutlet var segumentControl: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +26,9 @@ class PopularCityViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         configureNib()
-        segumentController.addTarget(self, action: #selector(didChangeValue(segment:)), for: .valueChanged)
+        segumentControl.addTarget(self, action: #selector(didChangeValue(segment:)), for: .valueChanged)
         configureSearchController()
-        didChangeValue(segment: segumentController)
+        didChangeValue(segment: segumentControl)
     }
 
     func configureNib() {
@@ -82,12 +83,22 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
     }
 }
 
-extension PopularCityViewController: UISearchResultsUpdating, UISearchControllerDelegate {
+extension PopularCityViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         print(#function)
         let keyword = (searchController.searchBar.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
 
-        let segIndex = segumentController.selectedSegmentIndex
+        if keyword.isEmpty {
+            print(1)
+            if !lastKeyword.isEmpty {
+                print(2)
+                didChangeValue(segment: segumentControl)
+            }
+			lastKeyword = ""
+            return
+        }
+
+        let segIndex = segumentControl.selectedSegmentIndex
 
         filteredCities = cities.city.filter { city in
             if segIndex == 1 {
@@ -103,6 +114,11 @@ extension PopularCityViewController: UISearchResultsUpdating, UISearchController
             return city.city_name.lowercased().contains(keyword) || city.city_english_name.lowercased().contains(keyword) || city.city_explain.lowercased().contains(keyword)
         }
 
+        lastKeyword = keyword
         tableView.reloadData()
+    }
+
+    func didDismissSearchController(_ searchController: UISearchController) {
+        print(#function)
     }
 }

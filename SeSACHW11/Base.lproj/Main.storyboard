@@ -215,7 +215,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="인기 도시" id="vxe-48-ic7"/>
                     <connections>
-                        <outlet property="segumentController" destination="ksg-OB-s4q" id="Pnh-0A-e1f"/>
+                        <outlet property="segumentControl" destination="ksg-OB-s4q" id="Pnh-0A-e1f"/>
                         <outlet property="tableView" destination="iuf-wn-Gsk" id="NuU-6V-EnJ"/>
                     </connections>
                 </viewController>
