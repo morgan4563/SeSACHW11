@@ -9,20 +9,65 @@ import UIKit
 class PupularCityViewController: UIViewController {
     let cities = CityInfo()
     var filteredCities: [City] = []
+    @IBOutlet var tableView: UITableView!
 
-    @IBOutlet var searchTextField: UITextField!
+    @IBOutlet var searchTextField: UISearchBar!
     @IBOutlet var segumentController: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         searchTextField.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
+        configureNib()
+        segumentController.addTarget(self, action: #selector(didChangeValue(segment:)), for: .valueChanged)
+        didChangeValue(segment: segumentController)
+    }
+
+    func configureNib() {
+        let xib = UINib(nibName: "PupularCityTableViewCell", bundle: nil)
+        tableView.register(xib, forCellReuseIdentifier: "PupularCityTableViewCell")
+    }
+
+    @objc func didChangeValue(segment: UISegmentedControl) {
+        switch segment.selectedSegmentIndex {
+        case 1:
+            filteredCities = cities.city.filter { $0.domestic_travel == true }
+        case 2:
+            filteredCities = cities.city.filter { $0.domestic_travel == false }
+        default:
+            filteredCities = cities.city
+        }
+        tableView.reloadData()
     }
 }
 
-extension PupularCityViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let keyword = (textField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+extension PupularCityViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredCities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PupularCityTableViewCell", for: indexPath) as! PupularCityTableViewCell
+        cell.configureUI(row: filteredCities[indexPath.row])
+
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //이동할 vc 추가하깅
+    }
+}
+
+extension PupularCityViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(#function)
+        let keyword = (searchTextField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
 
         let segIndex = segumentController.selectedSegmentIndex
 
@@ -40,11 +85,6 @@ extension PupularCityViewController: UITextFieldDelegate {
             return city.city_name.lowercased().contains(keyword) || city.city_english_name.lowercased().contains(keyword) || city.city_explain.lowercased().contains(keyword)
         }
 
-        print("\(keyword)로 검색한 결과 \(filteredCities.count)개 검색됨")
-        filteredCities.forEach {
-            print("\($0.city_name) / \($0.city_english_name)")
-        }
-
-        return true
+        tableView.reloadData()
     }
 }

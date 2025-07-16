@@ -220,7 +220,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIf-5y-MUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5422" y="735"/>
+            <point key="canvasLocation" x="5003" y="731"/>
         </scene>
         <!--인기 도시-->
         <scene sceneID="KMd-o4-fHC">
@@ -274,10 +274,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="인기 도시" id="vxe-48-ic7"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="jLL-aC-XQT" id="MWx-Lb-394"/>
+                        <outlet property="segumentController" destination="ksg-OB-s4q" id="Pnh-0A-e1f"/>
+                        <outlet property="tableView" destination="iuf-wn-Gsk" id="NuU-6V-EnJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJW-du-1sd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6237.68115942029" y="1537.5000000000002"/>
+            <point key="canvasLocation" x="5880" y="1538"/>
         </scene>
         <!--검색 임시-->
         <scene sceneID="c0E-jw-QhT">
@@ -320,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moT-55-Awu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6199" y="716"/>
+            <point key="canvasLocation" x="5880" y="730"/>
         </scene>
         <!--369-->
         <scene sceneID="jTP-y8-SES">
@@ -460,7 +465,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aC7-Ed-fPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5421.739130434783" y="1537.5000000000002"/>
+            <point key="canvasLocation" x="5004" y="1538"/>
         </scene>
     </scenes>
     <resources>
