@@ -13,7 +13,7 @@ class TravelTableViewController: UITableViewController {
         static let travelTableViewCell = "TravelTableViewCell"
         static let travelAdTableViewCell = "TravelADTableViewCell"
         static let detailVC = "TravelDetailViewController"
-        static let adDetailVC = "TravelDetailViewController"
+        static let adDetailVC = "TravelADDetailViewController"
         static let storyboardName = "Main"
     }
 
