@@ -172,6 +172,9 @@
                             <constraint firstAttribute="trailing" secondItem="nLR-7r-Cv1" secondAttribute="trailing" constant="60" id="jdB-rz-jTD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="nLR-7r-Cv1" id="b58-8o-w5b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufH-7a-kCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

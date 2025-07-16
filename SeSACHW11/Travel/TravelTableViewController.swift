@@ -92,6 +92,7 @@ class TravelTableViewController: UITableViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         if travelInfo.travel[indexPath.row].ad {
             let vc = sb.instantiateViewController(withIdentifier: "TravelADDetailViewController") as! TravelADDetailViewController
+            vc.travel = travelInfo.travel[indexPath.row]
 
 			let nav = UINavigationController(rootViewController: vc)
             nav.modalPresentationStyle = .fullScreen
