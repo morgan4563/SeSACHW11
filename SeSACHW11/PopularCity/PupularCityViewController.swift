@@ -7,6 +7,11 @@
 import UIKit
 
 class PupularCityViewController: UIViewController {
+    private enum Constants {
+		static let pupularCityTableViewCell = "PupularCityTableViewCell"
+        static let searchPlaceholder = "도시 검색"
+    }
+
     let cities = CityInfo()
     var filteredCities: [City] = []
 
@@ -25,8 +30,8 @@ class PupularCityViewController: UIViewController {
     }
 
     func configureNib() {
-        let xib = UINib(nibName: "PupularCityTableViewCell", bundle: nil)
-        tableView.register(xib, forCellReuseIdentifier: "PupularCityTableViewCell")
+        let xib = UINib(nibName: Constants.pupularCityTableViewCell, bundle: nil)
+        tableView.register(xib, forCellReuseIdentifier: Constants.pupularCityTableViewCell)
     }
 
     @objc func didChangeValue(segment: UISegmentedControl) {
@@ -44,7 +49,7 @@ class PupularCityViewController: UIViewController {
     func configureSearchController() {
 		let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
-        searchController.searchBar.placeholder = "도시 검색"
+        searchController.searchBar.placeholder = Constants.searchPlaceholder
         searchController.hidesNavigationBarDuringPresentation = false
         self.navigationItem.searchController = searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
@@ -57,7 +62,7 @@ extension PupularCityViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PupularCityTableViewCell", for: indexPath) as! PupularCityTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.pupularCityTableViewCell, for: indexPath) as! PupularCityTableViewCell
         cell.configureUI(row: filteredCities[indexPath.row])
 
         return cell

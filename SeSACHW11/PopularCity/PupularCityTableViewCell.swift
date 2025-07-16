@@ -11,18 +11,17 @@ import Kingfisher
 class PupularCityTableViewCell: UITableViewCell {
     @IBOutlet var cityImageFrameShawdow: UIView!
     @IBOutlet var cityImageFrame: UIView!
-
     @IBOutlet var cityName: UILabel!
-    @IBOutlet var cityExplainBackground: UIView!
     @IBOutlet var cityExplain: UILabel!
-
     @IBOutlet var cityImage: UIImageView!
-    @IBOutlet var cityImageBackground: UIView!
-
-    @IBOutlet var cityCellBackground: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        configureFrame()
+    }
+    
+    func configureFrame() {
         cityImageFrameShawdow.layer.cornerRadius = 15
         cityImageFrameShawdow.layer.shadowOpacity = 0.5
         cityImageFrameShawdow.layer.shadowOffset = CGSize(width: 0, height: 4)

@@ -9,16 +9,24 @@ import UIKit
 import Kingfisher
 
 class TravelTableViewController: UITableViewController {
+    private enum Constants {
+        static let travelTableViewCell = "TravelTableViewCell"
+        static let travelAdTableViewCell = "TravelADTableViewCell"
+        static let detailVC = "TravelDetailViewController"
+        static let adDetailVC = "TravelDetailViewController"
+        static let storyboardName = "Main"
+    }
+
     var travelInfo = TravelInfo()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let travelXib = UINib(nibName: "TravelTableViewCell", bundle: nil)
-        let travelAd = UINib(nibName: "TravelADTableViewCell", bundle: nil)
+        let travelXib = UINib(nibName: Constants.travelTableViewCell, bundle: nil)
+        let travelAd = UINib(nibName: Constants.travelAdTableViewCell, bundle: nil)
 
-        tableView.register(travelXib, forCellReuseIdentifier: "TravelTableViewCell")
-        tableView.register(travelAd, forCellReuseIdentifier: "TravelADTableViewCell")
+        tableView.register(travelXib, forCellReuseIdentifier: Constants.travelTableViewCell)
+        tableView.register(travelAd, forCellReuseIdentifier: Constants.travelAdTableViewCell)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,12 +36,12 @@ class TravelTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let travel = travelInfo.travel[indexPath.row]
         if travel.ad {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TravelADTableViewCell", for: indexPath) as! TravelADTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.travelAdTableViewCell, for: indexPath) as! TravelADTableViewCell
             configureAdCell(cell: cell, travel: travel)
 
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell", for: indexPath) as!
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.travelTableViewCell, for: indexPath) as!
             TravelTableViewCell
 
             configureTravelCell(cell: cell, travel: travel, indexPath: indexPath)
@@ -89,9 +97,9 @@ class TravelTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let sb = UIStoryboard(name: Constants.storyboardName, bundle: nil)
         if travelInfo.travel[indexPath.row].ad {
-            let vc = sb.instantiateViewController(withIdentifier: "TravelADDetailViewController") as! TravelADDetailViewController
+            let vc = sb.instantiateViewController(withIdentifier: Constants.adDetailVC) as! TravelADDetailViewController
             vc.travel = travelInfo.travel[indexPath.row]
 
 			let nav = UINavigationController(rootViewController: vc)
@@ -99,7 +107,7 @@ class TravelTableViewController: UITableViewController {
 
             present(nav, animated: true)
         } else {
-            let vc = sb.instantiateViewController(withIdentifier: "TravelDetailViewController") as! TravelDetailViewController
+            let vc = sb.instantiateViewController(withIdentifier: Constants.detailVC) as! TravelDetailViewController
             vc.travel = travelInfo.travel[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }

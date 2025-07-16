@@ -105,11 +105,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cityCellBackground" destination="hKF-27-h2e" id="cU0-V7-tji"/>
                 <outlet property="cityExplain" destination="6th-wJ-ZpS" id="dtL-yW-I6Y"/>
-                <outlet property="cityExplainBackground" destination="QPy-fi-7YJ" id="umf-ff-49H"/>
                 <outlet property="cityImage" destination="poK-pr-HFf" id="24v-O8-jd3"/>
-                <outlet property="cityImageBackground" destination="bxG-ey-JdW" id="4EW-i8-13n"/>
                 <outlet property="cityImageFrame" destination="boG-No-ize" id="Vla-Uf-sbN"/>
                 <outlet property="cityImageFrameShawdow" destination="PI3-I6-gNM" id="9wI-OK-BcA"/>
                 <outlet property="cityName" destination="Zyd-BE-uBQ" id="Wib-cn-dlf"/>
