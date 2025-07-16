@@ -9,21 +9,29 @@ import UIKit
 import Kingfisher
 
 class PupularCityTableViewCell: UITableViewCell {
+    @IBOutlet var cityImageFrameShawdow: UIView!
+    @IBOutlet var cityImageFrame: UIView!
+
     @IBOutlet var cityName: UILabel!
+    @IBOutlet var cityExplainBackground: UIView!
     @IBOutlet var cityExplain: UILabel!
+
     @IBOutlet var cityImage: UIImageView!
+    @IBOutlet var cityImageBackground: UIView!
+
     @IBOutlet var cityCellBackground: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        cityImageFrameShawdow.layer.cornerRadius = 15
+        cityImageFrameShawdow.layer.shadowOpacity = 0.5
+        cityImageFrameShawdow.layer.shadowOffset = CGSize(width: 0, height: 4)
+        cityImageFrameShawdow.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMinYCorner]
+        cityImageFrameShawdow.clipsToBounds = false
 
-//        cityImage.layer.cornerRadius = 15
-//        cityImage.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMinYCorner]
-//        cityImage.clipsToBounds = true
-
-//        cityCellBackground.layer.shadowOpacity = 0.5
-//        cityCellBackground.layer.shadowOffset = CGSize(width: 0, height: 2)
-    
+        cityImageFrame.layer.cornerRadius = 15
+        cityImageFrame.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMinYCorner]
+        cityImageFrame.clipsToBounds = true
     }
 
     func configureUI(row: City) {

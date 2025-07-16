@@ -180,7 +180,7 @@
             </objects>
             <point key="canvasLocation" x="3645" y="1538"/>
         </scene>
-        <!--Pupular City Table View Controller-->
+        <!--Item-->
         <scene sceneID="mAL-Rw-dhE">
             <objects>
                 <tableViewController storyboardIdentifier="PupularCityTableViewController" id="WdL-st-jrq" customClass="PupularCityTableViewController" customModule="SeSACHW11" customModuleProvider="target" sceneMemberID="viewController">
@@ -212,6 +212,7 @@
                             <outlet property="delegate" destination="WdL-st-jrq" id="JYQ-4z-Y6A"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="JN1-2W-FKu"/>
                     <navigationItem key="navigationItem" id="ItD-rp-b6e"/>
                     <connections>
                         <outlet property="segmentControl" destination="fSo-Vp-LQp" id="Rph-4F-MD7"/>
@@ -219,7 +220,64 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIf-5y-MUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5423" y="871"/>
+            <point key="canvasLocation" x="5422" y="735"/>
+        </scene>
+        <!--인기 도시-->
+        <scene sceneID="KMd-o4-fHC">
+            <objects>
+                <viewController id="2Aw-6y-qf9" customClass="PupularCityViewController" customModule="SeSACHW11" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mxi-Re-bce">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iuf-wn-Gsk">
+                                <rect key="frame" x="0.0" y="155" width="414" height="581"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xMB-PV-U8L">
+                                <rect key="frame" x="0.0" y="64" width="414" height="91"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jLL-aC-XQT">
+                                        <rect key="frame" x="16" y="0.0" width="382" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="2Aw-6y-qf9" id="INJ-et-S1e"/>
+                                        </connections>
+                                    </searchBar>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-OB-s4q">
+                                        <rect key="frame" x="16" y="60" width="382" height="32"/>
+                                        <segments>
+                                            <segment title="모두"/>
+                                            <segment title="국내"/>
+                                            <segment title="해외"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ksg-OB-s4q" firstAttribute="leading" secondItem="xMB-PV-U8L" secondAttribute="leading" constant="16" id="3Sq-Di-c9z"/>
+                                    <constraint firstAttribute="trailing" secondItem="jLL-aC-XQT" secondAttribute="trailing" constant="16" id="6zk-pG-lJO"/>
+                                    <constraint firstAttribute="trailing" secondItem="ksg-OB-s4q" secondAttribute="trailing" constant="16" id="99J-l8-dwM"/>
+                                    <constraint firstItem="jLL-aC-XQT" firstAttribute="leading" secondItem="xMB-PV-U8L" secondAttribute="leading" constant="16" id="Txy-RC-pqY"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vVW-LD-xh5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iuf-wn-Gsk" secondAttribute="bottom" id="3Qi-Pr-vrs"/>
+                            <constraint firstAttribute="trailing" secondItem="xMB-PV-U8L" secondAttribute="trailing" id="GB2-fE-pfC"/>
+                            <constraint firstItem="iuf-wn-Gsk" firstAttribute="top" secondItem="xMB-PV-U8L" secondAttribute="bottom" id="M63-OB-Xu8"/>
+                            <constraint firstItem="iuf-wn-Gsk" firstAttribute="trailing" secondItem="vVW-LD-xh5" secondAttribute="trailing" id="OCA-ky-j6g"/>
+                            <constraint firstItem="xMB-PV-U8L" firstAttribute="leading" secondItem="vVW-LD-xh5" secondAttribute="leading" id="dLz-5k-R8z"/>
+                            <constraint firstItem="iuf-wn-Gsk" firstAttribute="leading" secondItem="vVW-LD-xh5" secondAttribute="leading" id="nNX-uI-hSa"/>
+                            <constraint firstItem="xMB-PV-U8L" firstAttribute="top" secondItem="vVW-LD-xh5" secondAttribute="top" id="tg6-oc-hHM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="인기 도시" id="vxe-48-ic7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJW-du-1sd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6237.68115942029" y="1537.5000000000002"/>
         </scene>
         <!--검색 임시-->
         <scene sceneID="c0E-jw-QhT">
@@ -262,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moT-55-Awu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6205.7971014492759" y="870.6521739130435"/>
+            <point key="canvasLocation" x="6199" y="716"/>
         </scene>
         <!--369-->
         <scene sceneID="jTP-y8-SES">
@@ -358,8 +416,8 @@
                         <segue destination="AJB-HY-JCR" kind="relationship" relationship="viewControllers" id="EKU-J8-W4j"/>
                         <segue destination="el1-zD-HaE" kind="relationship" relationship="viewControllers" id="8Fs-XU-D9e"/>
                         <segue destination="feN-7y-lal" kind="relationship" relationship="viewControllers" id="c9R-kp-NPX"/>
-                        <segue destination="TsG-5t-nYD" kind="relationship" relationship="viewControllers" id="tqZ-9e-XNo"/>
-                        <segue destination="df6-bM-qMD" kind="relationship" relationship="viewControllers" id="jMs-Y7-Kde"/>
+                        <segue destination="XT8-m0-paY" kind="relationship" relationship="viewControllers" id="Fgg-qA-Fhi"/>
+                        <segue destination="WdL-st-jrq" kind="relationship" relationship="viewControllers" id="bHe-b5-WwZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70p-cl-Kv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -385,24 +443,24 @@
             </objects>
             <point key="canvasLocation" x="2143" y="871"/>
         </scene>
-        <!--Pupular-->
-        <scene sceneID="2WO-ZW-IAk">
+        <!--PupularCity-->
+        <scene sceneID="yq3-cq-U8C">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TsG-5t-nYD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pupular" image="person.3.fill" catalog="system" id="LYj-6q-S0z"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XT8-m0-paY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="PupularCity" image="person.3.fill" catalog="system" id="NeT-QR-cuv"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Yc-O8-2x8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YRY-E6-stY">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="WdL-st-jrq" kind="relationship" relationship="rootViewController" id="whq-la-y11"/>
+                        <segue destination="2Aw-6y-qf9" kind="relationship" relationship="rootViewController" id="DG8-K1-sFL"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JxR-Hr-zXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aC7-Ed-fPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4590" y="871"/>
+            <point key="canvasLocation" x="5421.739130434783" y="1537.5000000000002"/>
         </scene>
     </scenes>
     <resources>
