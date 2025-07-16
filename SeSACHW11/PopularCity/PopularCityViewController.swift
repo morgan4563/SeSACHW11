@@ -89,9 +89,7 @@ extension PopularCityViewController: UISearchResultsUpdating {
         let keyword = (searchController.searchBar.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
 
         if keyword.isEmpty {
-            print(1)
             if !lastKeyword.isEmpty {
-                print(2)
                 didChangeValue(segment: segumentControl)
             }
 			lastKeyword = ""
