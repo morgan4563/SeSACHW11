@@ -183,7 +183,7 @@
         <!--인기 도시-->
         <scene sceneID="KMd-o4-fHC">
             <objects>
-                <viewController id="2Aw-6y-qf9" customClass="PupularCityViewController" customModule="SeSACHW11" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Aw-6y-qf9" customClass="PopularCityViewController" customModule="SeSACHW11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mxi-Re-bce">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,6 +222,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJW-du-1sd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5349" y="888"/>
+        </scene>
+        <!--Popular City Detail View Controller-->
+        <scene sceneID="UiP-Fl-aRv">
+            <objects>
+                <viewController storyboardIdentifier="PopularCityDetailViewController" id="Jje-vA-heW" customClass="PopularCityDetailViewController" customModule="SeSACHW11" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BLf-QU-N2h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MN-PU-nfM">
+                                <rect key="frame" x="176.33333333333334" y="353.66666666666669" width="61.333333333333343" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="757-uY-bP6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1MN-PU-nfM" firstAttribute="centerX" secondItem="BLf-QU-N2h" secondAttribute="centerX" id="MNO-eX-P7t"/>
+                            <constraint firstItem="1MN-PU-nfM" firstAttribute="centerY" secondItem="BLf-QU-N2h" secondAttribute="centerY" id="Vsk-rg-zvY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="1MN-PU-nfM" id="Lod-X5-oLb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Os-g4-djy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6128" y="888"/>
         </scene>
         <!--369-->
         <scene sceneID="jTP-y8-SES">
@@ -343,11 +373,11 @@
             </objects>
             <point key="canvasLocation" x="2143" y="871"/>
         </scene>
-        <!--PupularCity-->
+        <!--PopularCity-->
         <scene sceneID="yq3-cq-U8C">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XT8-m0-paY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="PupularCity" image="person.3.fill" catalog="system" id="NeT-QR-cuv"/>
+                    <tabBarItem key="tabBarItem" title="PopularCity" image="person.3.fill" catalog="system" id="NeT-QR-cuv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YRY-E6-stY">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>

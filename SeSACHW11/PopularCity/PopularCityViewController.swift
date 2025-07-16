@@ -6,10 +6,11 @@
 //
 import UIKit
 
-class PupularCityViewController: UIViewController {
+class PopularCityViewController: UIViewController {
     private enum Constants {
-		static let pupularCityTableViewCell = "PupularCityTableViewCell"
+		static let popularCityTableViewCell = "PopularCityTableViewCell"
         static let searchPlaceholder = "도시 검색"
+        static let popularCityDetailViewController = "PopularCityDetailViewController"
     }
 
     let cities = CityInfo()
@@ -30,8 +31,8 @@ class PupularCityViewController: UIViewController {
     }
 
     func configureNib() {
-        let xib = UINib(nibName: Constants.pupularCityTableViewCell, bundle: nil)
-        tableView.register(xib, forCellReuseIdentifier: Constants.pupularCityTableViewCell)
+        let xib = UINib(nibName: Constants.popularCityTableViewCell, bundle: nil)
+        tableView.register(xib, forCellReuseIdentifier: Constants.popularCityTableViewCell)
     }
 
     @objc func didChangeValue(segment: UISegmentedControl) {
@@ -56,13 +57,13 @@ class PupularCityViewController: UIViewController {
     }
 }
 
-extension PupularCityViewController: UITableViewDelegate, UITableViewDataSource {
+extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredCities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.pupularCityTableViewCell, for: indexPath) as! PupularCityTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.popularCityTableViewCell, for: indexPath) as! PopularCityTableViewCell
         cell.configureUI(row: filteredCities[indexPath.row])
 
         return cell
@@ -73,11 +74,15 @@ extension PupularCityViewController: UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //이동할 vc 추가하깅
+    	let cityName = filteredCities[indexPath.row].city_name
+        let vc = self.storyboard?.instantiateViewController(identifier: Constants.popularCityDetailViewController) as! PopularCityDetailViewController
+        vc.cityName = cityName
+
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-extension PupularCityViewController: UISearchResultsUpdating, UISearchControllerDelegate {
+extension PopularCityViewController: UISearchResultsUpdating, UISearchControllerDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         print(#function)
         let keyword = (searchController.searchBar.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).lowercased()

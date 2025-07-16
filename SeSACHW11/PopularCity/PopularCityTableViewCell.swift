@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class PupularCityTableViewCell: UITableViewCell {
+class PopularCityTableViewCell: UITableViewCell {
     @IBOutlet var cityImageFrameShawdow: UIView!
     @IBOutlet var cityImageFrame: UIView!
     @IBOutlet var cityName: UILabel!
