@@ -99,7 +99,7 @@ class TravelTableViewController: UITableViewController {
             present(nav, animated: true)
         } else {
             let vc = sb.instantiateViewController(withIdentifier: "TravelDetailViewController") as! TravelDetailViewController
-
+            vc.travel = travelInfo.travel[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
     }

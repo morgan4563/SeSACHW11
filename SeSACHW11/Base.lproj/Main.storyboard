@@ -138,7 +138,10 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="9Iu-JP-gzf" id="S0w-3E-Kae"/>
+                        <outlet property="descriptionLabel" destination="7Oj-7j-iFF" id="cgM-hg-YIF"/>
                         <outlet property="imageBackgroundView" destination="KcQ-hM-lNK" id="XYH-Wg-Nqh"/>
+                        <outlet property="titleLabel" destination="8ny-Nr-R7X" id="ydE-bv-bT5"/>
+                        <outlet property="travelImage" destination="sEQ-hw-uRi" id="DrV-WW-P2j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQm-Nf-Obq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -6,11 +6,18 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TravelDetailViewController: UIViewController {
 
+    @IBOutlet var travelImage: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    
     @IBOutlet var imageBackgroundView: UIView!
     @IBOutlet var backButton: UIButton!
+
+    var travel: Travel = Travel(title: "", description: nil, travel_image: nil, grade: nil, save: nil, ad: true)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +31,17 @@ class TravelDetailViewController: UIViewController {
     }
 
     func UIsetting() {
+        if let urlString = travel.travel_image {
+            if let url = URL(string: urlString) {
+                let processor = DownsamplingImageProcessor(size: CGSize(width: travelImage.bounds.width, height: travelImage.bounds.height))
+                travelImage.kf.setImage(with: url, options: [.processor(processor)])
+            }
+        }
+        travelImage.contentMode = .scaleAspectFill
+
+        titleLabel.text = travel.title
+        descriptionLabel.text = travel.description
+
         imageBackgroundView.layer.cornerRadius = 15
         imageBackgroundView.clipsToBounds = true
 
