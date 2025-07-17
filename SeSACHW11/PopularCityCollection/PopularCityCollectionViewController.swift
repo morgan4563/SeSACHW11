@@ -23,13 +23,18 @@ class PopularCityCollectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        segmentControl.addTarget(self, action: #selector(didChangeValue(segment:)), for: .valueChanged)
+		collectionViewConfigure()
+		didChangeValue(segment: segmentControl)
+        configureSearchController()
+    }
 
+    func collectionViewConfigure() {
         let xib = UINib(nibName: Constants.popularCityCollectionViewCell, bundle: nil)
 
         collectionView.register(xib, forCellWithReuseIdentifier: Constants.popularCityCollectionViewCell)
         collectionView.delegate = self
         collectionView.dataSource = self
-        segmentControl.addTarget(self, action: #selector(didChangeValue(segment:)), for: .valueChanged)
 
         let layout = UICollectionViewFlowLayout()
         let deviceWidth = UIScreen.main.bounds.width
@@ -42,8 +47,6 @@ class PopularCityCollectionViewController: UIViewController {
         layout.scrollDirection = .vertical
 
         collectionView.collectionViewLayout = layout
-		didChangeValue(segment: segmentControl)
-        configureSearchController()
     }
 
     @objc func didChangeValue(segment: UISegmentedControl) {
