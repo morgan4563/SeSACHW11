@@ -454,11 +454,11 @@
             </objects>
             <point key="canvasLocation" x="4477" y="888"/>
         </scene>
-        <!--Item-->
+        <!--PopularCollection-->
         <scene sceneID="kw9-QF-wlq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tI3-ZW-4Do" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vRO-J3-jbK"/>
+                    <tabBarItem key="tabBarItem" title="PopularCollection" image="person.crop.square.fill" catalog="system" id="vRO-J3-jbK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K3n-ma-0fY">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -480,6 +480,7 @@
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.3.fill" catalog="system" width="128" height="66"/>
+        <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
