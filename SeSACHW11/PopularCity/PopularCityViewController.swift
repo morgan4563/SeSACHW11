@@ -18,7 +18,7 @@ class PopularCityViewController: UIViewController {
     var lastKeyword = ""
 
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var segumentControl: UISegmentedControl!
+    @IBOutlet var segmentControl: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,9 @@ class PopularCityViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         configureNib()
-        segumentControl.addTarget(self, action: #selector(didChangeValue(segment:)), for: .valueChanged)
+        segmentControl.addTarget(self, action: #selector(didChangeValue(segment:)), for: .valueChanged)
         configureSearchController()
-        didChangeValue(segment: segumentControl)
+        didChangeValue(segment: segmentControl)
     }
 
     func configureNib() {
@@ -90,13 +90,13 @@ extension PopularCityViewController: UISearchResultsUpdating {
 
         if keyword.isEmpty {
             if !lastKeyword.isEmpty {
-                didChangeValue(segment: segumentControl)
+                didChangeValue(segment: segmentControl)
             }
 			lastKeyword = ""
             return
         }
 
-        let segIndex = segumentControl.selectedSegmentIndex
+        let segIndex = segmentControl.selectedSegmentIndex
 
         filteredCities = cities.city.filter { city in
             if segIndex == 1 {

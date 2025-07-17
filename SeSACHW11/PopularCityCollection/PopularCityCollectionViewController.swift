@@ -10,11 +10,13 @@ import UIKit
 class PopularCityCollectionViewController: UIViewController {
     private enum Constants {
         static let popularCityCollectionViewCell = "PopularCityCollectionViewCell"
+        static let searchPlaceholder = "도시 검색"
     }
 
     let cities = CityInfo()
     var filteredCities: [City] = []
     var collectionCellRadius: CGFloat = 0
+    var lastKeyword = ""
 
     @IBOutlet var segmentControl: UISegmentedControl!
     @IBOutlet var collectionView: UICollectionView!
@@ -41,6 +43,7 @@ class PopularCityCollectionViewController: UIViewController {
 
         collectionView.collectionViewLayout = layout
 		didChangeValue(segment: segmentControl)
+        configureSearchController()
     }
 
     @objc func didChangeValue(segment: UISegmentedControl) {
@@ -53,6 +56,15 @@ class PopularCityCollectionViewController: UIViewController {
             filteredCities = cities.city
         }
         collectionView.reloadData()
+    }
+
+    func configureSearchController() {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = Constants.searchPlaceholder
+        searchController.hidesNavigationBarDuringPresentation = false
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
 }
 
@@ -68,5 +80,37 @@ extension PopularCityCollectionViewController: UICollectionViewDelegate, UIColle
         cell.configureUI(item: filteredCities[indexPath.item])
 
         return cell
+    }
+}
+
+extension PopularCityCollectionViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let keyword = (searchController.searchBar.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+
+        if keyword.isEmpty {
+            if !lastKeyword.isEmpty {
+                didChangeValue(segment: segmentControl)
+            }
+            lastKeyword = ""
+            return
+        }
+
+        let segIndex = segmentControl.selectedSegmentIndex
+
+        filteredCities = cities.city.filter { city in
+            if segIndex == 1 {
+                if !city.domestic_travel {
+                    return false
+                }
+            }
+            if segIndex == 2 {
+                if city.domestic_travel {
+                    return false
+                }
+            }
+            return city.city_name.lowercased().contains(keyword) || city.city_english_name.lowercased().contains(keyword) || city.city_explain.lowercased().contains(keyword)
+        }
+        lastKeyword = keyword
+        collectionView.reloadData()
     }
 }
